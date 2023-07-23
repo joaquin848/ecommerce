@@ -1,26 +1,32 @@
-import Brand from "./brand.js";
-import Itemlistcontainer from "../Itemlistcontainer.js";
-import Cartwidget from "../Cartwidget.js"
+import Brand from "./brand";
+import Itemlistcontainer from "./Itemlistcontainer";
+import CartWidget from "./Cartwidget";
+
 const NavBar = () => {
-    return(
-        <header>
-            <div className="containerBrand">
-               <Brand />
-            </div>
 
-            <nav className="containerItemList">
-                <Itemlistcontainer
-                itemUno = "Remeras"
-                itemDos = "Buzos"
-                itemTres = "Pantalones"
-                itemCuatro = "Zapatillas"
-                />
-            </nav>
+    return (
+        <ContextCart>
+            <header>
+                <div className="containerBrand">
+                    <Brand />
+                </div>
 
-            <div className="containerCart">
-                <Cartwidget />
-            </div>
-        </header>
+                <nav className="containerItemList">
+                    <Itemlistcontainer 
+                        itemUno = "Procesadores"
+                        itemDos = "Motherboards"
+                        itemTres = "Fuentes"
+                        itemCuatro = "Placas de video"
+                    />
+                </nav>
+
+                <div className="containerCart">
+                    <CartWidget />
+                </div>
+
+                <ContainerCart />
+            </header>
+        </ContextCart>
     )
 }
 
