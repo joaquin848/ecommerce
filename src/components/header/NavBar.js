@@ -5,7 +5,6 @@ import CartWidget from "./Cartwidget";
 const NavBar = () => {
 
     return (
-        <ContextCart>
             <header>
                 <div className="containerBrand">
                     <Brand />
@@ -23,10 +22,7 @@ const NavBar = () => {
                 <div className="containerCart">
                     <CartWidget />
                 </div>
-
-                <ContainerCart />
             </header>
-        </ContextCart>
     )
 }
 

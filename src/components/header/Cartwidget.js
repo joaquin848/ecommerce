@@ -5,7 +5,7 @@ const CartWidget = () => {
         <div className="containerLength">
             <img src={cart} alt="cart"></img>
             <span className="cantCart">
-                {listCart.length}
+                1
             </span>
         </div>
     )

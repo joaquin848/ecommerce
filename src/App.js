@@ -1,13 +1,19 @@
 import './style.css';
 import NavBar from './components/header/NavBar';
-import CardItem from './components/components item/Carditem';
+import ContainerCardItems from './components/components item/ContainerCardItems';
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import DetailsItem from './components/components item/DetailsItem';
 
 function App() {
   return (
-    <>
-    <NavBar/>
-    <CardItem/>
-    </>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path='/' element= { <ContainerCardItems/> }/>
+        <Route path='/item/:idItem' element={ <DetailsItem />} />
+        <Route path='/category/:idCategory' element={ <ContainerCardItems />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
