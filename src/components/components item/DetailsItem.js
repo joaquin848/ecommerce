@@ -2,6 +2,7 @@ import Image from "./image";
 import Description from "./Description";
 import "../../styles/detailsItem.css";
 import ButtonDetalles from "./Buttondetalles";
+import AddCantCart from "./AddCantCart";
 import fetchSimultion from "../../utils/fetchSimulation";
 import productos from "../../utils/products";
 import { useParams } from "react-router-dom";
@@ -40,7 +41,10 @@ const DetailsItem = () => {
                                 />
                                 
                             <div className="buttons">
-                        
+                                    <AddCantCart
+                                        cant= {3}
+                                    />
+
                                     <ButtonDetalles 
                                         txt="Agregar al carrito"
                                     />

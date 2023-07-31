@@ -3,9 +3,9 @@ const AddCantCart = (props) => {
         <div className="addCantCart">
             <span>Quiero:</span>
             <div>
-                <button id="quitar">-</button>
+                <button className="quitar">-</button>
                 <span className="cantTxt"> {props.cant} unidades</span>
-                <button id="aumentar">+</button>
+                <button className="aumentar">+</button>
             </div>
         </div>
     )   

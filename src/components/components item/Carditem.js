@@ -3,6 +3,7 @@ import "../../styles/cardItem.css"
 import Description from "./Description";
 import ButtonDetalles from "./Buttondetalles";
 import ButttonAddCart from "./ButtonAddCart";
+import AddCantCart from "./AddCantCart";
 import { Link } from "react-router-dom";
 import cart from "../../img/cart white.svg"
 
@@ -23,7 +24,6 @@ const CardItem = (props) => {
                         txt="Ver detalles" 
                     />
                 </Link>
-
                 <ButttonAddCart 
                     id={props.id}
                     svg={cart}
