@@ -3,10 +3,13 @@ import NavBar from './components/header/NavBar';
 import ContainerCardItems from './components/components item/ContainerCardItems';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import DetailsItem from './components/components item/DetailsItem';
+import { createContext, useState } from 'react';
+import ProviderContextCart from './components/components item/providerContextoListCart';
 
 function App() {
   return (
-    <BrowserRouter>
+    <ProviderContextCart>
+      <BrowserRouter>
       <NavBar />
       <Routes>
         <Route path='/' element= { <ContainerCardItems/> }/>
@@ -14,6 +17,7 @@ function App() {
         <Route path='/category/:idCategory' element={ <ContainerCardItems />} />
       </Routes>
     </BrowserRouter>
+    </ProviderContextCart>
   );
 }
 

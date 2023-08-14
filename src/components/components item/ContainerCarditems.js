@@ -1,10 +1,10 @@
-// import CardItem from "./CardItem";
 import fetchSimultion from "../../utils/fetchSimulation";
 import productos from "../../utils/products";
 import { useState, useEffect } from "react";
 import CardItem from "./Carditem";
 import "../../styles/containerCardsItem.css"
 import { useParams } from "react-router-dom";
+import MoonLoader from "react-spinners/ClipLoader";
 
 const ContainerCardItems = () => {
     const [ datos, setDatos ] = useState( [] );
@@ -29,7 +29,8 @@ const ContainerCardItems = () => {
     return(
         <div className="containerCardItems">
             {
-             datos.map( product => (
+                (datos.length === 0 ) ? <div className="containerSpinner"> <MoonLoader color="#5b00fb" /> </div>
+                : datos.map( product => (
                     <CardItem 
                         key={product.id}
                         id={product.id}

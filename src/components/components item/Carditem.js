@@ -3,7 +3,6 @@ import "../../styles/cardItem.css"
 import Description from "./Description";
 import ButtonDetalles from "./Buttondetalles";
 import ButttonAddCart from "./ButtonAddCart";
-import AddCantCart from "./AddCantCart";
 import { Link } from "react-router-dom";
 import cart from "../../img/cart white.svg"
 

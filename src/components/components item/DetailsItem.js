@@ -2,11 +2,11 @@ import Image from "./image";
 import Description from "./Description";
 import "../../styles/detailsItem.css";
 import ButtonDetalles from "./Buttondetalles";
-import AddCantCart from "./AddCantCart";
 import fetchSimultion from "../../utils/fetchSimulation";
 import productos from "../../utils/products";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import MoonLoader from "react-spinners/ClipLoader";
 
 const DetailsItem = () => {
     const [ datos, setDatos ] = useState([]);
@@ -24,7 +24,8 @@ const DetailsItem = () => {
     return(
         <div className="detailsItem">
             {
-             datos.map( items => (
+                (datos.length === 0) ? <MoonLoader color="#5b00fb" /> 
+                : datos.map( items => (
                     <>
                         <div className="containerLeft">
                             <Image 
@@ -41,12 +42,10 @@ const DetailsItem = () => {
                                 />
                                 
                             <div className="buttons">
-                                    <AddCantCart
-                                        cant= {3}
-                                    />
-
-                                    <ButtonDetalles 
+                        
+                                    <ButtonDetalles
                                         txt="Agregar al carrito"
+                                        
                                     />
                             </div>
                         </div>
